@@ -1,6 +1,6 @@
 # Assessment of Semantic Segmentation Robustness Under Image Degradation in Railway Environments
 
-## 📌 Overview
+## Overview
 This project evaluates the robustness of real-time semantic segmentation models under degraded visual conditions in railway environments.
 
 The study focuses on how segmentation performance is affected by:
@@ -11,7 +11,7 @@ The study focuses on how segmentation performance is affected by:
 
 ---
 
-## 🎯 Objectives
+## Objectives
 - Evaluate robustness under image degradations
 - Compare real-time segmentation models
 - Analyze cross-condition generalization
@@ -19,17 +19,17 @@ The study focuses on how segmentation performance is affected by:
 
 ---
 
-## 🧠 Models Used
-- **DDRNet-23** – Best real-world performance
-- <img width="496" height="225" alt="image" src="https://github.com/user-attachments/assets/b72ead6f-1801-480f-9508-4e925038a47b" />
-- **SCTNet-B-Seg75** – Efficient and fast
-- **SCTNet-B-Seg100** – Best robustness under degradation.
-- <img width="496" height="227" alt="image" src="https://github.com/user-attachments/assets/8e99352f-62b5-4c6c-bfa1-9b363182a9f5" />
+## Models Used
+- **DDRNet-23** - Best real-world performance
+- **SCTNet-B-Seg75** - Efficient and fast
+- **SCTNet-B-Seg100** - Best robustness under degradation
 
+<img width="496" height="225" alt="DDRNet-23 qualitative result" src="https://github.com/user-attachments/assets/b72ead6f-1801-480f-9508-4e925038a47b" />
+<img width="496" height="227" alt="SCTNet-B-Seg100 qualitative result" src="https://github.com/user-attachments/assets/8e99352f-62b5-4c6c-bfa1-9b363182a9f5" />
 
 ---
 
-## 📂 Datasets
+## Datasets
 
 ### 1. RailSem19 (Real Dataset)
 - ~8,500 annotated railway images
@@ -37,7 +37,8 @@ The study focuses on how segmentation performance is affected by:
 - Augmented using:
   - Brightness: 0.5, 0.6, 0.7
   - Contrast: 0.6, 0.7
-  - <img width="1302" height="173" alt="image" src="https://github.com/user-attachments/assets/f20996ef-b47b-4435-9db5-388784137bbf" />
+
+<img width="1302" height="173" alt="RailSem19 augmentation examples" src="https://github.com/user-attachments/assets/f20996ef-b47b-4435-9db5-388784137bbf" />
 
 ---
 
@@ -48,11 +49,12 @@ The study focuses on how segmentation performance is affected by:
   - Rain
   - Snow (light, medium, heavy)
   - Different lighting conditions
-  - <img width="1080" height="332" alt="image" src="https://github.com/user-attachments/assets/1c790e54-e3e5-4aa6-829b-bb0651b3381f" />
+
+<img width="1080" height="332" alt="Simulated weather conditions" src="https://github.com/user-attachments/assets/1c790e54-e3e5-4aa6-829b-bb0651b3381f" />
 
 ---
 
-## ⚙️ Training Setup
+## Training Setup
 - Optimizer: AdamW
 - Learning Rate: 0.0001
 - Epochs: 150
@@ -61,9 +63,9 @@ The study focuses on how segmentation performance is affected by:
 
 ---
 
-## 📊 Results
+## Results
 
-### 🔹 RailSem19 Performance
+### RailSem19 Performance
 | Model | mIoU (%) |
 |------|--------|
 | SCTNet-B-Seg75 | 85.02 |
@@ -72,7 +74,7 @@ The study focuses on how segmentation performance is affected by:
 
 ---
 
-### 🔹 Key Observations
+### Key Observations
 - DDRNet-23 achieved best real-world performance
 - SCTNet-B-Seg100 showed strongest robustness
 - Performance drops significantly under fog and snow
@@ -80,20 +82,23 @@ The study focuses on how segmentation performance is affected by:
 
 ---
 
-## 🖼️ Example Results
-<img width="1235" height="551" alt="image" src="https://github.com/user-attachments/assets/a83224b7-ea75-41e6-9a21-fc4a25a8f75f" />
+## Example Results
+
+<img width="1235" height="551" alt="Qualitative segmentation comparison" src="https://github.com/user-attachments/assets/a83224b7-ea75-41e6-9a21-fc4a25a8f75f" />
 
 ---
+
 ## Qualitative Segmentation Results
-<img width="1171" height="198" alt="image" src="https://github.com/user-attachments/assets/4d11aa22-be5e-4846-9c95-9ac3a5f8951a" />
 
+<img width="1171" height="198" alt="Qualitative segmentation results across conditions" src="https://github.com/user-attachments/assets/4d11aa22-be5e-4846-9c95-9ac3a5f8951a" />
 
+---
 
-## 🚀 How to Run
+## How to Run
 
 ### Activate environment
 ```bash
-conda activate /data/pool/qmc-41b/.conda_envs/ddrnet23
+conda activate <your-env-name>
 ```
 
 ### Run benchmark
@@ -107,7 +112,7 @@ python benchmark_ddrnet_fps.py \
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 ```
 ddrnet23/
 sctnet_b_seg75/
@@ -116,13 +121,13 @@ sctnet_b_seg100/
 
 ---
 
-## ⚠️ Note
+## Note
 - Large files (checkpoints, datasets) are not included
 - This repository contains code and evaluation scripts only
 
 ---
 
-## 👨‍💻 Author
-Vamsi Kumar Yerasani  
-Master’s in Information Technology  
+## Author
+Vamsi Kumar Yerasani
+Master's in Information Technology
 TH OWL
